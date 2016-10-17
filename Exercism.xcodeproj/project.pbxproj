@@ -13,6 +13,9 @@
 		4108F6271CEA45D900738A42 /* Accumulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108F6261CEA45D900738A42 /* Accumulate.swift */; };
 		411F5CFD1CEA7F1F008FBAAE /* SumOfMultiplesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411F5CFA1CEA7F0D008FBAAE /* SumOfMultiplesTest.swift */; };
 		411F5CFF1CEA7F36008FBAAE /* SumOfMultiples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411F5CFE1CEA7F36008FBAAE /* SumOfMultiples.swift */; };
+		4129745D1DB578F6004D0011 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4129745B1DB578F6004D0011 /* README.md */; };
+		4129745E1DB578FB004D0011 /* QueenAttackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4129745A1DB578F6004D0011 /* QueenAttackTest.swift */; };
+		412974601DB57914004D0011 /* QueenAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4129745F1DB57914004D0011 /* QueenAttack.swift */; };
 		413DBD771CD3CABC008BE51B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DBD761CD3CABC008BE51B /* AppDelegate.swift */; };
 		413DBD791CD3CABC008BE51B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DBD781CD3CABC008BE51B /* ViewController.swift */; };
 		413DBD7C1CD3CABC008BE51B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413DBD7A1CD3CABC008BE51B /* Main.storyboard */; };
@@ -104,6 +107,9 @@
 		411F5CF91CEA7F0D008FBAAE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		411F5CFA1CEA7F0D008FBAAE /* SumOfMultiplesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumOfMultiplesTest.swift; sourceTree = "<group>"; };
 		411F5CFE1CEA7F36008FBAAE /* SumOfMultiples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumOfMultiples.swift; sourceTree = "<group>"; };
+		4129745A1DB578F6004D0011 /* QueenAttackTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueenAttackTest.swift; sourceTree = "<group>"; };
+		4129745B1DB578F6004D0011 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4129745F1DB57914004D0011 /* QueenAttack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueenAttack.swift; sourceTree = "<group>"; };
 		413DBD731CD3CABC008BE51B /* Exercism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413DBD761CD3CABC008BE51B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413DBD781CD3CABC008BE51B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +259,16 @@
 			path = "sum-of-multiples";
 			sourceTree = "<group>";
 		};
+		412974591DB578F6004D0011 /* queen-attack */ = {
+			isa = PBXGroup;
+			children = (
+				4129745F1DB57914004D0011 /* QueenAttack.swift */,
+				4129745A1DB578F6004D0011 /* QueenAttackTest.swift */,
+				4129745B1DB578F6004D0011 /* README.md */,
+			);
+			path = "queen-attack";
+			sourceTree = "<group>";
+		};
 		413DBD6A1CD3CABB008BE51B = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +313,7 @@
 		413DBD961CD3D015008BE51B /* swift */ = {
 			isa = PBXGroup;
 			children = (
+				412974591DB578F6004D0011 /* queen-attack */,
 				41A3AD3B1DB539A900EC2623 /* kindergarten-garden */,
 				414B6FB71DB058BD0067D42A /* clock */,
 				414B6FAF1DAF0DD20067D42A /* grains */,
@@ -758,10 +775,12 @@
 				413DBD771CD3CABC008BE51B /* AppDelegate.swift in Sources */,
 				411F5CFF1CEA7F36008FBAAE /* SumOfMultiples.swift in Sources */,
 				41A3AD3F1DB539A900EC2623 /* README.md in Sources */,
+				4129745D1DB578F6004D0011 /* README.md in Sources */,
 				413DBDCF1CD3D290008BE51B /* Anagram.swift in Sources */,
 				41EDF54C1D00E32A004219D0 /* Triangle.swift in Sources */,
 				4169B1081D00FE2E00F7C979 /* RomanNumerals.swift in Sources */,
 				414B6FAE1DAF04970067D42A /* RnaTranscription.swift in Sources */,
+				412974601DB57914004D0011 /* QueenAttack.swift in Sources */,
 				414B6FA31DAEF66E0067D42A /* README.md in Sources */,
 				4108F6271CEA45D900738A42 /* Accumulate.swift in Sources */,
 				41AFEE311CEE1B6400735796 /* Gigasecond.swift in Sources */,
@@ -800,6 +819,7 @@
 				414B6FA41DAEF67B0067D42A /* DifferenceOfSquaresTest.swift in Sources */,
 				41EDF5531D00E7DD004219D0 /* ScrabbleScoreTest.swift in Sources */,
 				4162B6961CE3F8A700F68FE9 /* GradeSchoolTest.swift in Sources */,
+				4129745E1DB578FB004D0011 /* QueenAttackTest.swift in Sources */,
 				415B163D1D244D1A001AE860 /* BinaryTest.swift in Sources */,
 				4108F61D1CEA3F9600738A42 /* AllergiesTest.swift in Sources */,
 				414D50161CF4FADC00EAA983 /* MeetupTest.swift in Sources */,
