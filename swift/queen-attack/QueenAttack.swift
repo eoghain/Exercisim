@@ -11,6 +11,8 @@ class Queens {
     let white: [Int]
     let black: [Int]
     
+    private static let validRange = 0...7
+    
     var canAttack: Bool {
         switch true {
             case _ where white[0] == black[0]: fallthrough
@@ -27,7 +29,7 @@ class Queens {
         guard white[0] != black[0] || white[1] != black[1] else {
             throw InitError.sameSpace
         }
-        guard white[0] >= 0 && white[0] <= 7 && white[1] >= 0 && white[1] <= 7 && black[0] >= 0 && black[0] <= 7 && black[1] >= 0 && black[1] <= 7 else {
+        guard ((white + black).filter { Queens.validRange.contains($0) }).count == 4 else {
             throw InitError.invalidCoordinates
         }
         
@@ -38,18 +40,14 @@ class Queens {
 
 extension Queens: CustomStringConvertible {
     var description: String {
-        var output = ""
-        for x in 0..<8 {
-            for y in 0..<8 {
-                switch y {
-                case _ where white[0] == x && white[1] == y: output += "W "
-                case _ where black[0] == x && black[1] == y: output += "B "
-                default: output += "_ "
+        return Queens.validRange.map{ col -> String in
+            Queens.validRange.map{ row -> String in
+                switch (col, row) {
+                    case (white[0], white[1]): return "W"
+                    case (black[0], black[1]): return "B"
+                    default: return "_"
                 }
-            }
-            output = output.substringToIndex(output.endIndex.predecessor()) + "\n"
-        }
-    
-        return String(output.substringToIndex(output.endIndex.predecessor()))
+            }.joinWithSeparator(" ")
+        }.joinWithSeparator("\n")
     }
 }
