@@ -6,6 +6,18 @@ class Queens {
         case incorrectNumberOfCoordinates
         case invalidCoordinates
         case sameSpace
+        
+        static func validateQueens(white: [Int], _ black: [Int]) throws {
+            guard white.count == 2 && black.count == 2 else {
+            throw InitError.incorrectNumberOfCoordinates
+            }
+            guard white[0] != black[0] || white[1] != black[1] else {
+            throw InitError.sameSpace
+            }
+            guard ((white + black).filter { Queens.validRange.contains($0) }).count == 4 else {
+            throw InitError.invalidCoordinates
+            }
+        }
     }
     
     let white: [Int]
@@ -23,16 +35,7 @@ class Queens {
     }
     
     init(white: [Int] = [0, 3], black: [Int] = [7, 3]) throws {
-        guard white.count == 2 && black.count == 2 else {
-            throw InitError.incorrectNumberOfCoordinates
-        }
-        guard white[0] != black[0] || white[1] != black[1] else {
-            throw InitError.sameSpace
-        }
-        guard ((white + black).filter { Queens.validRange.contains($0) }).count == 4 else {
-            throw InitError.invalidCoordinates
-        }
-        
+        try InitError.validateQueens(white, black)
         self.white = white
         self.black = black
     }
