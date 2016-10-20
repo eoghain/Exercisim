@@ -1,31 +1,21 @@
 import Foundation
 
 struct SimulatedRobot {
-    enum Instructions: Int {
-        case TurnRight, Advance, TurnLeft
+    enum Instructions: Character {
+        case TurnRight = "R"
+        case TurnLeft = "L"
+        case Advance = "A"
     }
     
-    enum Bearing: Int {
+    enum Bearing {
         case north, east, south, west
-        
-        func turnLeft() -> Bearing {
-            if (self == .north)
-            {
-                return .west
-            }
-            return Bearing.init(rawValue: self.rawValue - 1)!
-        }
-        
-        func turnRight() -> Bearing {
-            if (self == .west)
-            {
-                return .north
-            }
-            return Bearing.init(rawValue: self.rawValue + 1)!
-        }
     }
     
-    var coordinates:[Int] = [0,0]
+    private var position: (x:Int, y:Int) = (0,0)
+    
+    var coordinates:[Int] {
+        return [position.x, position.y]
+    }
     var bearing:Bearing = .north
     
     mutating func orient(bearing:Bearing) {
@@ -33,29 +23,40 @@ struct SimulatedRobot {
     }
     
     mutating func turnRight() {
-        bearing = bearing.turnRight()
+        switch bearing {
+            case .north: orient(.east)
+            case .east: orient(.south)
+            case .south: orient(.west)
+            case .west: orient(.north)
+        }
     }
     
     mutating func turnLeft() {
-        bearing = bearing.turnLeft()
+        switch bearing {
+            case .north: orient(.west)
+            case .west: orient(.south)
+            case .south: orient(.east)
+            case .east: orient(.north)
+        }
     }
     
     mutating func at(x x:Int, y:Int) {
-        coordinates = [x,y]
+        position.x = x
+        position.y = y
     }
     
     mutating func advance() {
         switch bearing {
-            case .north: coordinates = [coordinates[0], coordinates[1] + 1]
-            case .east: coordinates = [coordinates[0] + 1, coordinates[1]]
-            case .south: coordinates = [coordinates[0], coordinates[1] - 1]
-            case .west: coordinates = [coordinates[0] - 1, coordinates[1]]
+            case .north: position.y += 1
+            case .east: position.x += 1
+            case .south: position.y -= 1
+            case .west: position.x -= 1
         }
     }
     
     mutating func place(x x:Int, y:Int, direction:Bearing) {
-        coordinates = [x,y]
-        bearing = direction
+        at(x:x, y:y)
+        orient(direction)
     }
     
     mutating func evaluate(instructions:String) {
@@ -69,14 +70,6 @@ struct SimulatedRobot {
     }
     
     func instructions(instructions:String) -> [Instructions] {
-        
-        return instructions.characters.map {  char in
-            switch(char) {
-            case "R": return .TurnRight
-            case "L": return .TurnLeft
-            case "A": return .Advance
-            default: return .Advance
-            }
-        }
+        return instructions.characters.map { Instructions(rawValue: $0)! }
     }
 }
