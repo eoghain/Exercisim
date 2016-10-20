@@ -19,6 +19,9 @@
 		412974801DB69C4A004D0011 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4129747E1DB69C4A004D0011 /* README.md */; };
 		412974821DB69C54004D0011 /* SieveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4129747F1DB69C4A004D0011 /* SieveTest.swift */; };
 		412974841DB69C60004D0011 /* Sieve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412974831DB69C60004D0011 /* Sieve.swift */; };
+		412974991DB96AC3004D0011 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 412974971DB96AC3004D0011 /* README.md */; };
+		4129749B1DB96ACF004D0011 /* RobotSimulatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412974981DB96AC3004D0011 /* RobotSimulatorTest.swift */; };
+		4129749D1DB96AE1004D0011 /* RobotSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4129749C1DB96AE1004D0011 /* RobotSimulator.swift */; };
 		413DBD771CD3CABC008BE51B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DBD761CD3CABC008BE51B /* AppDelegate.swift */; };
 		413DBD791CD3CABC008BE51B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DBD781CD3CABC008BE51B /* ViewController.swift */; };
 		413DBD7C1CD3CABC008BE51B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413DBD7A1CD3CABC008BE51B /* Main.storyboard */; };
@@ -116,6 +119,9 @@
 		4129747E1DB69C4A004D0011 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4129747F1DB69C4A004D0011 /* SieveTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SieveTest.swift; sourceTree = "<group>"; };
 		412974831DB69C60004D0011 /* Sieve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sieve.swift; sourceTree = "<group>"; };
+		412974971DB96AC3004D0011 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		412974981DB96AC3004D0011 /* RobotSimulatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotSimulatorTest.swift; sourceTree = "<group>"; };
+		4129749C1DB96AE1004D0011 /* RobotSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotSimulator.swift; sourceTree = "<group>"; };
 		413DBD731CD3CABC008BE51B /* Exercism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413DBD761CD3CABC008BE51B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413DBD781CD3CABC008BE51B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +291,16 @@
 			path = sieve;
 			sourceTree = "<group>";
 		};
+		412974961DB96AC3004D0011 /* robot-simulator */ = {
+			isa = PBXGroup;
+			children = (
+				4129749C1DB96AE1004D0011 /* RobotSimulator.swift */,
+				412974981DB96AC3004D0011 /* RobotSimulatorTest.swift */,
+				412974971DB96AC3004D0011 /* README.md */,
+			);
+			path = "robot-simulator";
+			sourceTree = "<group>";
+		};
 		413DBD6A1CD3CABB008BE51B = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +345,7 @@
 		413DBD961CD3D015008BE51B /* swift */ = {
 			isa = PBXGroup;
 			children = (
+				412974961DB96AC3004D0011 /* robot-simulator */,
 				4129747D1DB69C4A004D0011 /* sieve */,
 				412974591DB578F6004D0011 /* queen-attack */,
 				41A3AD3B1DB539A900EC2623 /* kindergarten-garden */,
@@ -808,9 +825,11 @@
 				4191B3231CDAB8BB00E841B2 /* PhoneNumber.swift in Sources */,
 				415B16471D257C0F001AE860 /* PrimeFactors.swift in Sources */,
 				414B6FBB1DB058BD0067D42A /* README.md in Sources */,
+				4129749D1DB96AE1004D0011 /* RobotSimulator.swift in Sources */,
 				4108F61F1CEA3FAA00738A42 /* Allergies.swift in Sources */,
 				413DBDC31CD3D104008BE51B /* Hamming.swift in Sources */,
 				413DBDC51CD3D126008BE51B /* WordCount.swift in Sources */,
+				412974991DB96AC3004D0011 /* README.md in Sources */,
 				4162B6981CE405FB00F68FE9 /* GradeSchool.swift in Sources */,
 				414B6FB61DAF0DE80067D42A /* Grains.swift in Sources */,
 			);
@@ -830,6 +849,7 @@
 				415B16751D272BB9001AE860 /* CryptoSquareTest.swift in Sources */,
 				41AFEE2F1CEE1B4000735796 /* GigasecondTest.swift in Sources */,
 				415B164D1D258326001AE860 /* RaindropsTest.swift in Sources */,
+				4129749B1DB96ACF004D0011 /* RobotSimulatorTest.swift in Sources */,
 				4108F6251CEA45AB00738A42 /* AccumulateTest.swift in Sources */,
 				414B6FB41DAF0DDC0067D42A /* GrainsTest.swift in Sources */,
 				415B16691D25DEB2001AE860 /* AtbashTest.swift in Sources */,
