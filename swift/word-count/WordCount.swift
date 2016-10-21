@@ -1,11 +1,3 @@
-//
-//  WordCount.swift
-//  Project
-//
-//  Created by Booth, Robert on 1/22/16.
-//  Copyright © 2016 Booth, Robert. All rights reserved.
-//
-
 import Foundation
 
 struct WordCount {

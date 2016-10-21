@@ -14,12 +14,5 @@ extension Array {
     
     func discard(predicate: (Element) -> Bool) -> [Element] {
         return keep { !predicate($0) }
-//        var discardArray = [Element]()
-//        for item in self {
-//            if (predicate(item) == false) {
-//                discardArray.append(item)
-//            }
-//        }
-//        return discardArray
     }
 }

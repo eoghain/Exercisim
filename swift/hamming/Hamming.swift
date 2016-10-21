@@ -1,11 +1,3 @@
-//
-//  Hamming.swift
-//  Project
-//
-//  Created by Booth, Robert on 1/21/16.
-//  Copyright © 2016 Booth, Robert. All rights reserved.
-//
-
 import Foundation
 
 struct Hamming {

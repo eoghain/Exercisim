@@ -1,11 +1,3 @@
-//
-//  NucleotideCount.swift
-//  Exercism
-//
-//  Created by Robert Booth on 4/29/16.
-//  Copyright © 2016 Robert Booth. All rights reserved.
-//
-
 import Foundation
 
 class DNA {

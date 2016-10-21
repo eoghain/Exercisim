@@ -2,6 +2,10 @@ All of my [Exercism.io](http://exercisim.io) projects done while I'm learning sw
 
 # Interesting Things
 
+## Enums
+
+* [SpaceAge](swift/spave-age/SpaceAge.swift) - Enum with custom values
+
 ## Errors
 
 * [Grains](swift/grains/Grains.swift) - Thowwing an ErrorType enum with with a message.  Check [GrainsTest](swift/grains/Grains.swift) for an example of how to catch errors with embedded messages.
@@ -31,3 +35,28 @@ init(white: [Int] = [0, 3], black: [Int] = [7, 3]) throws {
         self.black = black
     }
 ```
+
+## Extensions
+
+* [CryptoSquare](swift/crypto-square/CryptoSquare.swift) - Extending swift String to do custom processing
+* [Clock](swift/clock/Clock.swift) - Extending own class for protocol encapsulation
+* [RomanNumerals](swift/roman-numerals/RomanNumerals.swift) - Extending own class for protocol encapsulation
+* [RobotName](swift/robot-name/RobotName.swift) - Extending Array & Int
+* [Accumulate](swift/accumulate/Accumulate.swift) - Extending Array with Generic function
+* [Meetup](swift/accumulate/Meetup.swift) - Extending NSDateFormatter to add a convenience method to build from string
+* [Binary](swift/binary/Binary.swift) - Extending Int
+* [Bob](swift/bob/Bob.swift) - Extending String
+
+## Operator Overloading
+
+* [Clock](swift/clock/Clock.swift) - Implement == operator to allow custom class/struct to implement the Equatable protocol
+
+## Guarding
+
+* [NucleotideCount](swift/nucleotide-count/NucleotideCount.swift)
+* [Binary](swift/binary/Binary.swift) - Extending Int
+
+
+## Generics
+
+* [Accumulate](swift/accumulate/Accumulate.swift) - Extending Array with Generic function
