@@ -70,6 +70,6 @@ struct SimulatedRobot {
     }
     
     func instructions(instructions:String) -> [Instructions] {
-        return instructions.characters.map { Instructions(rawValue: $0)! }
+        return instructions.characters.flatMap { Instructions(rawValue: $0) }
     }
 }
