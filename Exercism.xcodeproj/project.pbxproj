@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		31BEEB931DBFC4580035E9CF /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BEEB901DBFC4580035E9CF /* BinarySearch.swift */; };
 		31BEEB961DBFC4580035E9CF /* BinarySearchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BEEB911DBFC4580035E9CF /* BinarySearchTest.swift */; };
+		31FBEC751DC2BB03003C5F0D /* SecretHandshakeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */; };
+		31FBEC771DC2BB29003C5F0D /* SecretHandshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */; };
 		4108F61D1CEA3F9600738A42 /* AllergiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108F6191CEA3F9100738A42 /* AllergiesTest.swift */; };
 		4108F61F1CEA3FAA00738A42 /* Allergies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108F61E1CEA3FAA00738A42 /* Allergies.swift */; };
 		4108F6251CEA45AB00738A42 /* AccumulateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108F6211CEA45A100738A42 /* AccumulateTest.swift */; };
@@ -101,6 +103,9 @@
 		31BEEB901DBFC4580035E9CF /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BinarySearch.swift; path = "binary-search/BinarySearch.swift"; sourceTree = "<group>"; };
 		31BEEB911DBFC4580035E9CF /* BinarySearchTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BinarySearchTest.swift; path = "binary-search/BinarySearchTest.swift"; sourceTree = "<group>"; };
 		31BEEB921DBFC4580035E9CF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "binary-search/README.md"; sourceTree = "<group>"; };
+		31FBEC721DC2BB03003C5F0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretHandshakeTest.swift; sourceTree = "<group>"; };
+		31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretHandshake.swift; sourceTree = "<group>"; };
 		4108F6191CEA3F9100738A42 /* AllergiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergiesTest.swift; sourceTree = "<group>"; };
 		4108F61A1CEA3F9100738A42 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4108F61E1CEA3FAA00738A42 /* Allergies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Allergies.swift; sourceTree = "<group>"; };
@@ -248,6 +253,16 @@
 			name = "binary-search";
 			sourceTree = "<group>";
 		};
+		31FBEC711DC2BB03003C5F0D /* secret-handshake */ = {
+			isa = PBXGroup;
+			children = (
+				31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */,
+				31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */,
+				31FBEC721DC2BB03003C5F0D /* README.md */,
+			);
+			path = "secret-handshake";
+			sourceTree = "<group>";
+		};
 		4108F6181CEA3F9000738A42 /* allergies */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +367,7 @@
 		413DBD961CD3D015008BE51B /* swift */ = {
 			isa = PBXGroup;
 			children = (
+				31FBEC711DC2BB03003C5F0D /* secret-handshake */,
 				31BEEB8F1DBFC43F0035E9CF /* binary-search */,
 				412974961DB96AC3004D0011 /* robot-simulator */,
 				4129747D1DB69C4A004D0011 /* sieve */,
@@ -847,12 +863,14 @@
 				4191B3241CDAB8E200E841B2 /* PhoneNumberTest.swift in Sources */,
 				413DBDCB1CD3D176008BE51B /* EtlTest.swift in Sources */,
 				415B16631D25D775001AE860 /* StrainTest.swift in Sources */,
+				31FBEC771DC2BB29003C5F0D /* SecretHandshake.swift in Sources */,
 				415B16551D258C50001AE860 /* BobTest.swift in Sources */,
 				41A3AD401DB539AE00EC2623 /* KindergartenGardenTest.swift in Sources */,
 				415B16751D272BB9001AE860 /* CryptoSquareTest.swift in Sources */,
 				41AFEE2F1CEE1B4000735796 /* GigasecondTest.swift in Sources */,
 				415B164D1D258326001AE860 /* RaindropsTest.swift in Sources */,
 				4129749B1DB96ACF004D0011 /* RobotSimulatorTest.swift in Sources */,
+				31FBEC751DC2BB03003C5F0D /* SecretHandshakeTest.swift in Sources */,
 				4108F6251CEA45AB00738A42 /* AccumulateTest.swift in Sources */,
 				414B6FB41DAF0DDC0067D42A /* GrainsTest.swift in Sources */,
 				415B16691D25DEB2001AE860 /* AtbashTest.swift in Sources */,
