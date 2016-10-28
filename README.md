@@ -8,7 +8,7 @@ All of my [Exercism.io](http://exercisim.io) projects done while I'm learning sw
 
 ## Errors
 
-* [Grains](swift/grains/Grains.swift) - Thowwing an ErrorType enum with with a message.  Check [GrainsTest](swift/grains/Grains.swift) for an example of how to catch errors with embedded messages.
+* [Grains](swift/grains/Grains.swift) - Thowing an ErrorType enum with with a message.  Check [GrainsTest](swift/grains/Grains.swift) for an example of how to catch errors with embedded messages.
 
 * [QueenAttack](swift/queen-attack.QueenAttack.swift) - Embedding validation logic inside of the ErrorType enum for clean methods that look like:
 ```swift
@@ -60,3 +60,4 @@ init(white: [Int] = [0, 3], black: [Int] = [7, 3]) throws {
 ## Generics
 
 * [Accumulate](swift/accumulate/Accumulate.swift) - Extending Array with Generic function
+* [SimpleLinkedList](swift/simple-linked-list/SimpleLinkedList.swift) - Generic class from scratch
