@@ -1,10 +1,9 @@
-#if swift(>=3.0)
-    import XCTest
-#endif
+import XCTest
+@testable import Exercism
 
 private extension XCTest {
     func XCTAssertEqualMultiArray(_ aArray1: Array<Array<Int>>, _ aArray2: Array<Array<Int>>) {
-        XCTAssertEqual(Array(aArray1.joined()), Array(aArray2.joined()))
+        XCTAssertEqual(Array(aArray1.flatten()), Array(aArray2.flatten()))
     }
 }
 

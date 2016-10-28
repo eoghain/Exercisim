@@ -11,6 +11,8 @@
 		31BEEB961DBFC4580035E9CF /* BinarySearchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BEEB911DBFC4580035E9CF /* BinarySearchTest.swift */; };
 		31FBEC751DC2BB03003C5F0D /* SecretHandshakeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */; };
 		31FBEC771DC2BB29003C5F0D /* SecretHandshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */; };
+		31FBEC7C1DC2CE01003C5F0D /* SeriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC7A1DC2CE01003C5F0D /* SeriesTest.swift */; };
+		31FBEC7E1DC2CE24003C5F0D /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC7D1DC2CE24003C5F0D /* Series.swift */; };
 		4108F61D1CEA3F9600738A42 /* AllergiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108F6191CEA3F9100738A42 /* AllergiesTest.swift */; };
 		4108F61F1CEA3FAA00738A42 /* Allergies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108F61E1CEA3FAA00738A42 /* Allergies.swift */; };
 		4108F6251CEA45AB00738A42 /* AccumulateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108F6211CEA45A100738A42 /* AccumulateTest.swift */; };
@@ -106,6 +108,9 @@
 		31FBEC721DC2BB03003C5F0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretHandshakeTest.swift; sourceTree = "<group>"; };
 		31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretHandshake.swift; sourceTree = "<group>"; };
+		31FBEC791DC2CE01003C5F0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		31FBEC7A1DC2CE01003C5F0D /* SeriesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesTest.swift; sourceTree = "<group>"; };
+		31FBEC7D1DC2CE24003C5F0D /* Series.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		4108F6191CEA3F9100738A42 /* AllergiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergiesTest.swift; sourceTree = "<group>"; };
 		4108F61A1CEA3F9100738A42 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4108F61E1CEA3FAA00738A42 /* Allergies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Allergies.swift; sourceTree = "<group>"; };
@@ -263,6 +268,16 @@
 			path = "secret-handshake";
 			sourceTree = "<group>";
 		};
+		31FBEC781DC2CE01003C5F0D /* series */ = {
+			isa = PBXGroup;
+			children = (
+				31FBEC7D1DC2CE24003C5F0D /* Series.swift */,
+				31FBEC7A1DC2CE01003C5F0D /* SeriesTest.swift */,
+				31FBEC791DC2CE01003C5F0D /* README.md */,
+			);
+			path = series;
+			sourceTree = "<group>";
+		};
 		4108F6181CEA3F9000738A42 /* allergies */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +382,7 @@
 		413DBD961CD3D015008BE51B /* swift */ = {
 			isa = PBXGroup;
 			children = (
+				31FBEC781DC2CE01003C5F0D /* series */,
 				31FBEC711DC2BB03003C5F0D /* secret-handshake */,
 				31BEEB8F1DBFC43F0035E9CF /* binary-search */,
 				412974961DB96AC3004D0011 /* robot-simulator */,
@@ -892,9 +908,11 @@
 				413DBDCA1CD3D174008BE51B /* HammingTest.swift in Sources */,
 				4162B6B11CE532A500F68FE9 /* RobotNameTest.swift in Sources */,
 				414B6FAC1DAF048A0067D42A /* RnaTranscriptionTest.swift in Sources */,
+				31FBEC7E1DC2CE24003C5F0D /* Series.swift in Sources */,
 				413DBDC91CD3D16F008BE51B /* LeapTest.swift in Sources */,
 				412974821DB69C54004D0011 /* SieveTest.swift in Sources */,
 				413DBDD71CD3DCF7008BE51B /* NucleotideCountTest.swift in Sources */,
+				31FBEC7C1DC2CE01003C5F0D /* SeriesTest.swift in Sources */,
 				31BEEB961DBFC4580035E9CF /* BinarySearchTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
