@@ -11,18 +11,7 @@ class Element<T: Equatable> {
     }
     
     static func fromArray(array: [T]) -> Element<T> {
-        guard array.count >= 1 else {
-            return Element.init()
-        }
-        
-        var array = array
-        var current = Element(array.popLast()!, nil)
-        
-        array.reverse().forEach { value in
-            current = Element(value, current)
-        }
-        
-        return current
+        return array.reverse().reduce(Element<T>()) { Element($1, $0) }
     }
     
     func toArray() -> [T] {
