@@ -30,12 +30,6 @@ class Element<T: Equatable> {
     }
     
     func reverseElements() -> Element<T> {
-        guard let next = self.next else {
-            return self
-        }
-        
-        let reverse = next.reverseElements()
-        reverse.next = self;
-        return reverse
+        return Element.fromArray(self.toArray().reverse())
     }
 }
