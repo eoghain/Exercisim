@@ -13,10 +13,10 @@ extension String {
         var acronym = ""
         var addNext = true
         let isUppercase = (self == self.uppercaseString)
-        for (index, char) in self.characters.enumerate() {
+        for char in self.characters {
             let upChar = String(char).uppercaseString
 
-            if (index == 0 || addNext) {
+            if (addNext) {
                 addNext = false
                 acronym += upChar
                 continue
