@@ -17,6 +17,8 @@
 		31FBEC771DC2BB29003C5F0D /* SecretHandshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */; };
 		31FBEC7C1DC2CE01003C5F0D /* SeriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC7A1DC2CE01003C5F0D /* SeriesTest.swift */; };
 		31FBEC7E1DC2CE24003C5F0D /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC7D1DC2CE24003C5F0D /* Series.swift */; };
+		31FDC1A61DCD4A5A0081B20B /* MatrixTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FDC1A21DCD4A540081B20B /* MatrixTest.swift */; };
+		31FDC1A81DCD4A6F0081B20B /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FDC1A71DCD4A6F0081B20B /* Matrix.swift */; };
 		4108F61D1CEA3F9600738A42 /* AllergiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108F6191CEA3F9100738A42 /* AllergiesTest.swift */; };
 		4108F61F1CEA3FAA00738A42 /* Allergies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108F61E1CEA3FAA00738A42 /* Allergies.swift */; };
 		4108F6251CEA45AB00738A42 /* AccumulateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108F6211CEA45A100738A42 /* AccumulateTest.swift */; };
@@ -121,6 +123,9 @@
 		31FBEC791DC2CE01003C5F0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		31FBEC7A1DC2CE01003C5F0D /* SeriesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesTest.swift; sourceTree = "<group>"; };
 		31FBEC7D1DC2CE24003C5F0D /* Series.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
+		31FDC1A21DCD4A540081B20B /* MatrixTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTest.swift; sourceTree = "<group>"; };
+		31FDC1A31DCD4A540081B20B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		31FDC1A71DCD4A6F0081B20B /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		4108F6191CEA3F9100738A42 /* AllergiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergiesTest.swift; sourceTree = "<group>"; };
 		4108F61A1CEA3F9100738A42 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4108F61E1CEA3FAA00738A42 /* Allergies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Allergies.swift; sourceTree = "<group>"; };
@@ -308,6 +313,16 @@
 			path = series;
 			sourceTree = "<group>";
 		};
+		31FDC1A11DCD4A540081B20B /* matrix */ = {
+			isa = PBXGroup;
+			children = (
+				31FDC1A71DCD4A6F0081B20B /* Matrix.swift */,
+				31FDC1A21DCD4A540081B20B /* MatrixTest.swift */,
+				31FDC1A31DCD4A540081B20B /* README.md */,
+			);
+			path = matrix;
+			sourceTree = "<group>";
+		};
 		4108F6181CEA3F9000738A42 /* allergies */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +427,7 @@
 		413DBD961CD3D015008BE51B /* swift */ = {
 			isa = PBXGroup;
 			children = (
+				31FDC1A11DCD4A540081B20B /* matrix */,
 				318FDEA31DCAB8CB0071FCA5 /* acronym */,
 				3153999B1DC3ED6500C19DB2 /* simple-linked-list */,
 				31FBEC781DC2CE01003C5F0D /* series */,
@@ -876,6 +892,7 @@
 				41C59E6F1CE6924100236624 /* PerfectNumbers.swift in Sources */,
 				415B166B1D25DEC2001AE860 /* Atbash.swift in Sources */,
 				41AFEE291CED0B0700735796 /* SpaceAge.swift in Sources */,
+				31FDC1A81DCD4A6F0081B20B /* Matrix.swift in Sources */,
 				315399A21DC3ED8900C19DB2 /* SimpleLinkedList.swift in Sources */,
 				31BEEB931DBFC4580035E9CF /* BinarySearch.swift in Sources */,
 				413DBDB51CD3D015008BE51B /* helloWorld.swift in Sources */,
@@ -929,6 +946,7 @@
 				41EDF54A1D00E2FB004219D0 /* TriangleTest.swift in Sources */,
 				415B16451D257BF9001AE860 /* PrimeFactorsTest.swift in Sources */,
 				414B6FA41DAEF67B0067D42A /* DifferenceOfSquaresTest.swift in Sources */,
+				31FDC1A61DCD4A5A0081B20B /* MatrixTest.swift in Sources */,
 				41EDF5531D00E7DD004219D0 /* ScrabbleScoreTest.swift in Sources */,
 				4162B6961CE3F8A700F68FE9 /* GradeSchoolTest.swift in Sources */,
 				4129745E1DB578FB004D0011 /* QueenAttackTest.swift in Sources */,
