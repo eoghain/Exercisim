@@ -28,19 +28,15 @@ struct Base {
         try BaseError.validate(inputBase: inputBase, inputDigits: inputDigits, outputBase: outputBase)
         
         var outputDigits = [Int]()
-        var decValue: Int = 0
+        var number: Int = 0
         
         for (index, digit) in inputDigits.reverse().enumerate() {
-            decValue += digit * Int(pow(Double(inputBase), Double(index)))
+            number += digit * Int(pow(Double(inputBase), Double(index)))
         }
 
-        while decValue >= outputBase {
-            outputDigits.append(decValue % outputBase)
-            decValue /= outputBase
-        }
-        
-        if decValue > 0 {
-            outputDigits.append(decValue)
+        while number > 0 {
+            outputDigits.append(number % outputBase)
+            number /= outputBase
         }
         
         return outputDigits.reverse()
