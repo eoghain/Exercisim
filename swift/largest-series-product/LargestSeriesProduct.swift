@@ -38,15 +38,11 @@ struct NumberSeries {
         
         var largestProduct = 0
         
-        for index in series.startIndex..<series.endIndex {
-            let spanEnd = index.advancedBy(span - 1)
-            if spanEnd >= series.endIndex {
-                break
-            }
-            
-            largestProduct = max(largestProduct, series.characters[index...spanEnd].flatMap{ Int(String($0)) }.reduce(1) { $0 * $1 } )
+        let digits = series.characters.flatMap{ Int(String($0)) }
+        for index in 0...digits.count - span {
+            largestProduct = max(largestProduct, digits[index..<index + span].reduce(1, combine: *))
         }
-        
+
         return largestProduct
     }
 }
