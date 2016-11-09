@@ -3,24 +3,35 @@
 import Foundation
 
 
-let matrix = "1 2\n10 20"
+let phrases: [(item:String,action:String)] = [
+    (item: "horse and the hound and the horn", action: "belonged to"),
+    (item: "farmer sowing his corn", action: "kept"),
+    (item: "rooster that crowed in the morn", action: "woke"),
+    (item: "priest all shaven and shorn", action: "married"),
+    (item: "man all tattered and torn", action: "kissed"),
+    (item: "maiden all forlorn", action: "milked"),
+    (item: "cow with the crumpled horn", action: "tossed"),
+    (item: "dog", action: "worried"),
+    (item: "cat", action: "killed"),
+    (item: "rat", action: "ate"),
+    (item: "malt", action: "lay in"),
+    (item: "house", action:"")
+]
 
-let rowSplit = matrix.characters.split(separator: "\n").map{ String($0) }
-let numbers = rowSplit.map{ $0.characters.split(separator: " ").map{ Int(String($0)) } }
-print(numbers)
+func verse(number: Int) -> String {
+    
+    var verse = phrases.reversed()[0...number].reversed().reduce("") { (song: String, line: (item:String,action:String)) in
+            return song + "the \(line.item)\nthat \(line.action) "
+    }
+    verse = String(verse.characters.dropLast(7)) // remove last \nthat\n
 
+    return "This is \(verse) that Jack built."
+}
 
-let reverseMatrix = String(matrix.characters.reversed())
-print(reverseMatrix)
-let reverseRowSplit = reverseMatrix.characters.split(separator: "\n").map{ String($0) }
-let fixedReverseRowSplit = reverseRowSplit.map{ String($0.characters.reversed()) }
-print("1:\(fixedReverseRowSplit)")
-let reverseNumbers = fixedReverseRowSplit.map{ $0.characters.split(separator: " ").map{ Int(String($0)) } }
-print(reverseRowSplit)
-print(reverseNumbers)
+//This is the rat
+//that ate the malt
+//that lay in the house that Jack built.
 
-//let strRows = matrix.characters.split(separator: "\n").map{ String($0).characters.split(separator: " ").map{ Int(String($0)) } }.flatMap{ $0 }
-//let intRows = strRows.map{ $0.characters.split(separator: " ").map{ Int(String($0)) } }
-//print("strRows: \(strRows)")
-//print("strRowsNoSpaces: \(strRowsNoSpaces)")
-//print("intRows: \(intRows)")
+//let song = (0..<phrases.count).reduce("") { return $0 + verse(number:$1) }
+let song = (0..<phrases.count).map { verse(number:$0) }.joined(separator: "\n\n")
+print (song)
