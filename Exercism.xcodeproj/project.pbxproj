@@ -17,6 +17,8 @@
 		319B7C321DD240D6007B3101 /* LargestSeriesProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B7C311DD240D6007B3101 /* LargestSeriesProduct.swift */; };
 		319B7C441DD3BB6A007B3101 /* HouseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B7C401DD3BB67007B3101 /* HouseTest.swift */; };
 		319B7C461DD3BB88007B3101 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B7C451DD3BB88007B3101 /* House.swift */; };
+		319B7C811DD672F9007B3101 /* PythagoreanTripletTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B7C7D1DD672ED007B3101 /* PythagoreanTripletTest.swift */; };
+		319B7C831DD67307007B3101 /* PythagoreanTriplet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B7C821DD67307007B3101 /* PythagoreanTriplet.swift */; };
 		31BEEB931DBFC4580035E9CF /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BEEB901DBFC4580035E9CF /* BinarySearch.swift */; };
 		31BEEB961DBFC4580035E9CF /* BinarySearchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BEEB911DBFC4580035E9CF /* BinarySearchTest.swift */; };
 		31FBEC751DC2BB03003C5F0D /* SecretHandshakeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */; };
@@ -129,6 +131,9 @@
 		319B7C401DD3BB67007B3101 /* HouseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTest.swift; sourceTree = "<group>"; };
 		319B7C411DD3BB67007B3101 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		319B7C451DD3BB88007B3101 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		319B7C7D1DD672ED007B3101 /* PythagoreanTripletTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythagoreanTripletTest.swift; sourceTree = "<group>"; };
+		319B7C7E1DD672ED007B3101 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		319B7C821DD67307007B3101 /* PythagoreanTriplet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythagoreanTriplet.swift; sourceTree = "<group>"; };
 		31BEEB901DBFC4580035E9CF /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BinarySearch.swift; path = "binary-search/BinarySearch.swift"; sourceTree = "<group>"; };
 		31BEEB911DBFC4580035E9CF /* BinarySearchTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BinarySearchTest.swift; path = "binary-search/BinarySearchTest.swift"; sourceTree = "<group>"; };
 		31BEEB921DBFC4580035E9CF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "binary-search/README.md"; sourceTree = "<group>"; };
@@ -328,6 +333,16 @@
 			path = house;
 			sourceTree = "<group>";
 		};
+		319B7C7C1DD672ED007B3101 /* pythagorean-triplet */ = {
+			isa = PBXGroup;
+			children = (
+				319B7C821DD67307007B3101 /* PythagoreanTriplet.swift */,
+				319B7C7D1DD672ED007B3101 /* PythagoreanTripletTest.swift */,
+				319B7C7E1DD672ED007B3101 /* README.md */,
+			);
+			path = "pythagorean-triplet";
+			sourceTree = "<group>";
+		};
 		31BEEB8F1DBFC43F0035E9CF /* binary-search */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +487,7 @@
 		413DBD961CD3D015008BE51B /* swift */ = {
 			isa = PBXGroup;
 			children = (
+				319B7C7C1DD672ED007B3101 /* pythagorean-triplet */,
 				319B7C3F1DD3BB67007B3101 /* house */,
 				319B7C2B1DD24096007B3101 /* largest-series-product */,
 				314F5F5D1DD1367B00A7A375 /* all-your-base */,
@@ -969,6 +985,7 @@
 				319B7C321DD240D6007B3101 /* LargestSeriesProduct.swift in Sources */,
 				413DBDC31CD3D104008BE51B /* Hamming.swift in Sources */,
 				413DBDC51CD3D126008BE51B /* WordCount.swift in Sources */,
+				319B7C831DD67307007B3101 /* PythagoreanTriplet.swift in Sources */,
 				4162B6981CE405FB00F68FE9 /* GradeSchool.swift in Sources */,
 				414B6FB61DAF0DE80067D42A /* Grains.swift in Sources */,
 			);
@@ -1007,6 +1024,7 @@
 				4108F61D1CEA3F9600738A42 /* AllergiesTest.swift in Sources */,
 				414D50161CF4FADC00EAA983 /* MeetupTest.swift in Sources */,
 				4169B1061D00FE2000F7C979 /* RomanNumeralsTest.swift in Sources */,
+				319B7C811DD672F9007B3101 /* PythagoreanTripletTest.swift in Sources */,
 				41BAAB6F1CE6463300B2AD63 /* PerfectNumbersTest.swift in Sources */,
 				411F5CFD1CEA7F1F008FBAAE /* SumOfMultiplesTest.swift in Sources */,
 				413DBDCD1CD3D248008BE51B /* AnagramTest.swift in Sources */,
