@@ -22,6 +22,7 @@
 		319B7C831DD67307007B3101 /* PythagoreanTriplet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B7C821DD67307007B3101 /* PythagoreanTriplet.swift */; };
 		31BEEB931DBFC4580035E9CF /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BEEB901DBFC4580035E9CF /* BinarySearch.swift */; };
 		31BEEB961DBFC4580035E9CF /* BinarySearchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BEEB911DBFC4580035E9CF /* BinarySearchTest.swift */; };
+		31C6E1DD1DDE5EF800730337 /* SaddlePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6E1DC1DDE5EF800730337 /* SaddlePoints.swift */; };
 		31FBEC751DC2BB03003C5F0D /* SecretHandshakeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */; };
 		31FBEC771DC2BB29003C5F0D /* SecretHandshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */; };
 		31FBEC7C1DC2CE01003C5F0D /* SeriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC7A1DC2CE01003C5F0D /* SeriesTest.swift */; };
@@ -140,6 +141,7 @@
 		31BEEB901DBFC4580035E9CF /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BinarySearch.swift; path = "binary-search/BinarySearch.swift"; sourceTree = "<group>"; };
 		31BEEB911DBFC4580035E9CF /* BinarySearchTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BinarySearchTest.swift; path = "binary-search/BinarySearchTest.swift"; sourceTree = "<group>"; };
 		31BEEB921DBFC4580035E9CF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "binary-search/README.md"; sourceTree = "<group>"; };
+		31C6E1DC1DDE5EF800730337 /* SaddlePoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaddlePoints.swift; sourceTree = "<group>"; };
 		31FBEC721DC2BB03003C5F0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretHandshakeTest.swift; sourceTree = "<group>"; };
 		31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretHandshake.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		317083D11DDBC5FE00458C2E /* saddle-points */ = {
 			isa = PBXGroup;
 			children = (
+				31C6E1DC1DDE5EF800730337 /* SaddlePoints.swift */,
 				317083D31DDBC5FE00458C2E /* SaddlePointsTest.swift */,
 				317083D21DDBC5FE00458C2E /* README.md */,
 			);
@@ -955,6 +958,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C6E1DD1DDE5EF800730337 /* SaddlePoints.swift in Sources */,
 				415B16571D258C63001AE860 /* Bob.swift in Sources */,
 				415B164F1D258336001AE860 /* Raindrops.swift in Sources */,
 				41A3AD421DB539CD00EC2623 /* KindergartenGarden.swift in Sources */,
