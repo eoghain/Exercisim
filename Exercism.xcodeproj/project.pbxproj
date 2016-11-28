@@ -25,6 +25,8 @@
 		31C6E1DD1DDE5EF800730337 /* SaddlePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6E1DC1DDE5EF800730337 /* SaddlePoints.swift */; };
 		31F896A61DE525ED0004E7D9 /* PascalsTriangleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F896A21DE525E30004E7D9 /* PascalsTriangleTest.swift */; };
 		31F896A81DE526000004E7D9 /* PascalsTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F896A71DE526000004E7D9 /* PascalsTriangle.swift */; };
+		31F896BD1DECEC610004E7D9 /* PangramTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F896B91DECEC5A0004E7D9 /* PangramTest.swift */; };
+		31F896BF1DECEC730004E7D9 /* Pangram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F896BE1DECEC730004E7D9 /* Pangram.swift */; };
 		31FBEC751DC2BB03003C5F0D /* SecretHandshakeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */; };
 		31FBEC771DC2BB29003C5F0D /* SecretHandshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */; };
 		31FBEC7C1DC2CE01003C5F0D /* SeriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC7A1DC2CE01003C5F0D /* SeriesTest.swift */; };
@@ -147,6 +149,9 @@
 		31F896A21DE525E30004E7D9 /* PascalsTriangleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PascalsTriangleTest.swift; sourceTree = "<group>"; };
 		31F896A31DE525E30004E7D9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		31F896A71DE526000004E7D9 /* PascalsTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PascalsTriangle.swift; sourceTree = "<group>"; };
+		31F896B91DECEC5A0004E7D9 /* PangramTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PangramTest.swift; sourceTree = "<group>"; };
+		31F896BA1DECEC5A0004E7D9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		31F896BE1DECEC730004E7D9 /* Pangram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pangram.swift; sourceTree = "<group>"; };
 		31FBEC721DC2BB03003C5F0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretHandshakeTest.swift; sourceTree = "<group>"; };
 		31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretHandshake.swift; sourceTree = "<group>"; };
@@ -383,6 +388,16 @@
 			path = "pascals-triangle";
 			sourceTree = "<group>";
 		};
+		31F896B81DECEC5A0004E7D9 /* pangram */ = {
+			isa = PBXGroup;
+			children = (
+				31F896BE1DECEC730004E7D9 /* Pangram.swift */,
+				31F896B91DECEC5A0004E7D9 /* PangramTest.swift */,
+				31F896BA1DECEC5A0004E7D9 /* README.md */,
+			);
+			path = pangram;
+			sourceTree = "<group>";
+		};
 		31FBEC711DC2BB03003C5F0D /* secret-handshake */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,6 +532,7 @@
 		413DBD961CD3D015008BE51B /* swift */ = {
 			isa = PBXGroup;
 			children = (
+				31F896B81DECEC5A0004E7D9 /* pangram */,
 				31F896A11DE525E30004E7D9 /* pascals-triangle */,
 				317083D11DDBC5FE00458C2E /* saddle-points */,
 				319B7C7C1DD672ED007B3101 /* pythagorean-triplet */,
@@ -997,6 +1013,7 @@
 				413DBD791CD3CABC008BE51B /* ViewController.swift in Sources */,
 				41BAAB691CE63A6300B2AD63 /* RobotName.swift in Sources */,
 				318FDEAA1DCAB8E50071FCA5 /* Acronym.swift in Sources */,
+				31F896BF1DECEC730004E7D9 /* Pangram.swift in Sources */,
 				415B16771D272BC9001AE860 /* CryptoSquare.swift in Sources */,
 				413DBD771CD3CABC008BE51B /* AppDelegate.swift in Sources */,
 				411F5CFF1CEA7F36008FBAAE /* SumOfMultiples.swift in Sources */,
@@ -1059,6 +1076,7 @@
 				4108F61D1CEA3F9600738A42 /* AllergiesTest.swift in Sources */,
 				317083D61DDBC60400458C2E /* SaddlePointsTest.swift in Sources */,
 				414D50161CF4FADC00EAA983 /* MeetupTest.swift in Sources */,
+				31F896BD1DECEC610004E7D9 /* PangramTest.swift in Sources */,
 				4169B1061D00FE2000F7C979 /* RomanNumeralsTest.swift in Sources */,
 				319B7C811DD672F9007B3101 /* PythagoreanTripletTest.swift in Sources */,
 				41BAAB6F1CE6463300B2AD63 /* PerfectNumbersTest.swift in Sources */,
