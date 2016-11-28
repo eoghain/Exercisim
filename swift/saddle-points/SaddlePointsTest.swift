@@ -3,8 +3,6 @@ import XCTest
 
 private extension XCTest {
     func XCTAssertEqualMultiArray(aArray1: Array<Array<Int>>, _ aArray2: Array<Array<Int>>) {
-        print(aArray1)
-        print(aArray2)
         XCTAssertEqual(aArray1.flatMap{ String($0) }, aArray2.flatMap{ String($0) })
     }
 }

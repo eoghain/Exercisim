@@ -23,6 +23,8 @@
 		31BEEB931DBFC4580035E9CF /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BEEB901DBFC4580035E9CF /* BinarySearch.swift */; };
 		31BEEB961DBFC4580035E9CF /* BinarySearchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BEEB911DBFC4580035E9CF /* BinarySearchTest.swift */; };
 		31C6E1DD1DDE5EF800730337 /* SaddlePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C6E1DC1DDE5EF800730337 /* SaddlePoints.swift */; };
+		31F896A61DE525ED0004E7D9 /* PascalsTriangleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F896A21DE525E30004E7D9 /* PascalsTriangleTest.swift */; };
+		31F896A81DE526000004E7D9 /* PascalsTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F896A71DE526000004E7D9 /* PascalsTriangle.swift */; };
 		31FBEC751DC2BB03003C5F0D /* SecretHandshakeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */; };
 		31FBEC771DC2BB29003C5F0D /* SecretHandshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */; };
 		31FBEC7C1DC2CE01003C5F0D /* SeriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBEC7A1DC2CE01003C5F0D /* SeriesTest.swift */; };
@@ -142,6 +144,9 @@
 		31BEEB911DBFC4580035E9CF /* BinarySearchTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BinarySearchTest.swift; path = "binary-search/BinarySearchTest.swift"; sourceTree = "<group>"; };
 		31BEEB921DBFC4580035E9CF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "binary-search/README.md"; sourceTree = "<group>"; };
 		31C6E1DC1DDE5EF800730337 /* SaddlePoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaddlePoints.swift; sourceTree = "<group>"; };
+		31F896A21DE525E30004E7D9 /* PascalsTriangleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PascalsTriangleTest.swift; sourceTree = "<group>"; };
+		31F896A31DE525E30004E7D9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		31F896A71DE526000004E7D9 /* PascalsTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PascalsTriangle.swift; sourceTree = "<group>"; };
 		31FBEC721DC2BB03003C5F0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		31FBEC731DC2BB03003C5F0D /* SecretHandshakeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretHandshakeTest.swift; sourceTree = "<group>"; };
 		31FBEC761DC2BB29003C5F0D /* SecretHandshake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretHandshake.swift; sourceTree = "<group>"; };
@@ -368,6 +373,16 @@
 			name = "binary-search";
 			sourceTree = "<group>";
 		};
+		31F896A11DE525E30004E7D9 /* pascals-triangle */ = {
+			isa = PBXGroup;
+			children = (
+				31F896A71DE526000004E7D9 /* PascalsTriangle.swift */,
+				31F896A21DE525E30004E7D9 /* PascalsTriangleTest.swift */,
+				31F896A31DE525E30004E7D9 /* README.md */,
+			);
+			path = "pascals-triangle";
+			sourceTree = "<group>";
+		};
 		31FBEC711DC2BB03003C5F0D /* secret-handshake */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +517,7 @@
 		413DBD961CD3D015008BE51B /* swift */ = {
 			isa = PBXGroup;
 			children = (
+				31F896A11DE525E30004E7D9 /* pascals-triangle */,
 				317083D11DDBC5FE00458C2E /* saddle-points */,
 				319B7C7C1DD672ED007B3101 /* pythagorean-triplet */,
 				319B7C3F1DD3BB67007B3101 /* house */,
@@ -987,6 +1003,7 @@
 				413DBDCF1CD3D290008BE51B /* Anagram.swift in Sources */,
 				412974841DB69C60004D0011 /* Sieve.swift in Sources */,
 				41EDF54C1D00E32A004219D0 /* Triangle.swift in Sources */,
+				31F896A81DE526000004E7D9 /* PascalsTriangle.swift in Sources */,
 				4169B1081D00FE2E00F7C979 /* RomanNumerals.swift in Sources */,
 				314F5F641DD1369900A7A375 /* AllYourBase.swift in Sources */,
 				414B6FAE1DAF04970067D42A /* RnaTranscription.swift in Sources */,
@@ -1034,6 +1051,7 @@
 				415B16451D257BF9001AE860 /* PrimeFactorsTest.swift in Sources */,
 				414B6FA41DAEF67B0067D42A /* DifferenceOfSquaresTest.swift in Sources */,
 				31FDC1A61DCD4A5A0081B20B /* MatrixTest.swift in Sources */,
+				31F896A61DE525ED0004E7D9 /* PascalsTriangleTest.swift in Sources */,
 				41EDF5531D00E7DD004219D0 /* ScrabbleScoreTest.swift in Sources */,
 				4162B6961CE3F8A700F68FE9 /* GradeSchoolTest.swift in Sources */,
 				4129745E1DB578FB004D0011 /* QueenAttackTest.swift in Sources */,
