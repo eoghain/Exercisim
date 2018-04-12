@@ -5,7 +5,7 @@ struct WordCount {
     var phrase: String?
     
     init(words: String) {
-        phrase = words.lowercaseString;
+        phrase = words.lowercased();
     }
     
     func count() -> [String:Int] {
@@ -15,7 +15,9 @@ struct WordCount {
             return countDict
         }
         
-        words.enumerateSubstringsInRange(words.characters.indices, options: .ByWords) {
+        let range = Range(uncheckedBounds: (lower: words.startIndex, upper: words.endIndex))
+        
+        words.enumerateSubstrings(in: range, options: .byWords) {
             (substring, _, _, _) -> () in
             
             if let substring = substring {

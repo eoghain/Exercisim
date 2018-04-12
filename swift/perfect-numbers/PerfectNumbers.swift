@@ -1,7 +1,7 @@
 import Foundation
 
 enum NumberClassification {
-    case Perfect, Abundant, Deficient
+    case perfect, abundant, deficient
 }
 
 struct NumberClassifier {
@@ -10,15 +10,15 @@ struct NumberClassifier {
     
     var classification: NumberClassification {
         let factors = (1...number/2).filter{ number % $0 == 0 }
-        let sum = factors.reduce(0, combine: +)
+        let sum = factors.reduce(0, +)
         
         switch sum {
             case _ where sum > number:
-                return .Abundant
+                return .abundant
             case _ where sum < number:
-                return .Deficient
+                return .deficient
             default:
-                return .Perfect
+                return .perfect
         }
     }
 }

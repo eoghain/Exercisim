@@ -9,7 +9,7 @@ class HelloWorld
         return "Hello, World!"
     }
     
-    class func hello(name: String) -> String
+    class func hello(_ name: String) -> String
     {
         return "Hello, \(name)!"
     }

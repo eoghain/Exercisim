@@ -10,7 +10,7 @@ struct Bob {
         case Whatever = "Whatever."
     }
     
-    static func hey(input: String) -> String {
+    static func hey(_ input: String) -> String {
         switch input {
             case _ where input.isYell:
                 return Response.Chill.rawValue
@@ -38,14 +38,14 @@ extension String {
     }
     
     var trim: String {
-        return stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
+        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
     var hasUppercaseLetters: Bool {
-        return rangeOfCharacterFromSet(.uppercaseLetterCharacterSet()) != nil
+        return rangeOfCharacter(from: CharacterSet.uppercaseLetters) != nil
     }
     
     var hasLowercaseLetters: Bool {
-        return rangeOfCharacterFromSet(.lowercaseLetterCharacterSet()) != nil
+        return rangeOfCharacter(from: CharacterSet.lowercaseLetters) != nil
     }
 }

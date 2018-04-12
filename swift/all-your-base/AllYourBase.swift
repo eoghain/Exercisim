@@ -1,9 +1,9 @@
 import Foundation
 
-enum BaseError: ErrorType {
+enum BaseError: Error {
     case invalidOutputBase, invalidInputBase, invalidPositiveDigit, negativeDigit
     
-    static func validate(inputBase inputBase: Int, inputDigits: [Int], outputBase: Int) throws {
+    static func validate(inputBase: Int, inputDigits: [Int], outputBase: Int) throws {
         guard inputBase > 1 else {
             throw BaseError.invalidInputBase
         }
@@ -24,13 +24,13 @@ enum BaseError: ErrorType {
 
 struct Base {
     
-    static func outputDigits(inputBase inputBase: Int, inputDigits: [Int], outputBase: Int) throws -> [Int] {
+    static func outputDigits(inputBase: Int, inputDigits: [Int], outputBase: Int) throws -> [Int] {
         try BaseError.validate(inputBase: inputBase, inputDigits: inputDigits, outputBase: outputBase)
         
         var outputDigits = [Int]()
         var number: Int = 0
         
-        for (index, digit) in inputDigits.reverse().enumerate() {
+        for (index, digit) in inputDigits.reversed().enumerated() {
             number += digit * Int(pow(Double(inputBase), Double(index)))
         }
 
@@ -39,6 +39,6 @@ struct Base {
             number /= outputBase
         }
         
-        return outputDigits.reverse()
+        return outputDigits.reversed()
     }
 }

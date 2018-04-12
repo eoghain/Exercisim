@@ -2,18 +2,18 @@ import Foundation
 
 struct Grains {
     
-    enum GrainsError: ErrorType {
+    enum GrainsError: Error {
         case inputTooHigh(String)
         case inputTooLow(String)
     }
     
     static let total: UInt64 = ~0 // funky bitwise operation
     
-    static func message(value:Int) -> String {
+    static func message(_ value:Int) -> String {
         return "Input[\(value)] invalid. Input should be between 1 and 64 (inclusive)"
     }
     
-    static func square(square: Int) throws -> UInt64 {
+    static func square(_ square: Int) throws -> UInt64 {
         switch square {
             case _ where square < 1:
                 throw Grains.GrainsError.inputTooLow(message(square))

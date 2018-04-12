@@ -19,12 +19,12 @@ struct Clock: Equatable {
         totalMinutes = (hours * 60) + minutes
     }
     
-    func add(hours: Int = 0, minutes: Int = 0) -> Clock {
+    func add(_ hours: Int = 0, minutes: Int = 0) -> Clock {
         let newMinutes = totalMinutes + ((hours * 60) + minutes)
         return Clock(hours: 0, minutes: newMinutes)
     }
     
-    func subtract(hours: Int = 0, minutes: Int = 0) -> Clock {
+    func subtract(_ hours: Int = 0, minutes: Int = 0) -> Clock {
         let newMinutes = totalMinutes - ((hours * 60) + minutes)
         return Clock(hours: 0, minutes: newMinutes)
     }

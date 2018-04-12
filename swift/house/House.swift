@@ -17,9 +17,9 @@ struct House {
         (item: "house", action:"")
     ]
     
-    static func verse(number: Int) -> String {
+    static func verse(_ number: Int) -> String {
         
-        var verse = phrases.reverse()[0...number].reverse().reduce("") { (song: String, line: (item:String,action:String)) in
+        var verse = phrases.reversed()[0...number].reversed().reduce("") { (song: String, line: (item:String,action:String)) in
             return song + "the \(line.item)\nthat \(line.action) "
         }
         verse = String(verse.characters.dropLast(7)) // remove last \nthat\n
@@ -28,6 +28,6 @@ struct House {
     }
     
     static func recite() -> String {
-        return (0..<phrases.count).map { verse($0) }.joinWithSeparator("\n\n")
+        return (0..<phrases.count).map { verse($0) }.joined(separator: "\n\n")
     }
 }

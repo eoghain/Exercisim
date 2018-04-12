@@ -2,8 +2,8 @@ import Foundation
 
 class RandomNameGenerator {
     
-    private static var generatedNames = [String]()
-    private static let letters = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ".characters)
+    fileprivate static var generatedNames = [String]()
+    fileprivate static let letters = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ".characters)
     
     class func randomName() -> String {
         var name: String

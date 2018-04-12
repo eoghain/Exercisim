@@ -31,7 +31,7 @@ extension RomanNumeral: CustomStringConvertible {
         var val = romanNumeral;
         var output = ""
         
-        romanNumerals.reverse().forEach { (numeral: String, value: UInt) in
+        romanNumerals.reversed().forEach { (numeral: String, value: UInt) in
             while (val >= value) {
                 val -= value
                 output += numeral

@@ -1,6 +1,6 @@
 import Foundation
 
-enum BinarySearchError: ErrorType {
+enum BinarySearchError: Error {
     case unsorted
 }
 
@@ -18,7 +18,7 @@ struct BinarySearch {
         self.middle = list.count / 2
     }
     
-    func searchFor(num: Int) -> Int? {
+    func searchFor(_ num: Int) -> Int? {
         let middleValue = self.list[middle]
         var index: Int?
         switch num {
@@ -48,10 +48,10 @@ struct BinarySearch {
     }
 }
 
-extension CollectionType where Generator.Element: Comparable {
+extension Collection where Iterator.Element: Comparable {
     public var isSorted: Bool {
         var previousIndex = startIndex
-        var currentIndex = startIndex.successor()
+        var currentIndex = self.index(after: startIndex)
 
         while currentIndex != endIndex {
             if self[previousIndex] > self[currentIndex] {
@@ -59,7 +59,7 @@ extension CollectionType where Generator.Element: Comparable {
             }
             
             previousIndex = currentIndex
-            currentIndex = currentIndex.successor()
+            currentIndex = self.index(after: currentIndex)
         }
         return true
     }

@@ -4,14 +4,14 @@ struct NumberSeries {
     
     let series: String
     
-    enum NumberSeriesError: ErrorType {
+    enum NumberSeriesError: Error {
         case spanLongerThanStringLength, invalidCharacter, negativeSpan
         
-        static func validate(series: String, span: Int) throws {
+        static func validate(_ series: String, span: Int) throws {
             
-            let nonInts = NSCharacterSet.decimalDigitCharacterSet().invertedSet
+            let nonInts = CharacterSet.decimalDigits.inverted
             
-            guard series.rangeOfCharacterFromSet(nonInts) == nil else {
+            guard series.rangeOfCharacter(from: nonInts) == nil else {
                 throw NumberSeriesError.invalidCharacter
             }
             
@@ -29,7 +29,7 @@ struct NumberSeries {
         self.series = series
     }
     
-    func largestProduct(span: Int) throws -> Int {
+    func largestProduct(_ span: Int) throws -> Int {
         try NumberSeriesError.validate(series, span: span)
         
         guard span > 0 && series.characters.count > 0 else {
@@ -40,7 +40,7 @@ struct NumberSeries {
         
         let digits = series.characters.flatMap{ Int(String($0)) }
         for index in 0...digits.count - span {
-            largestProduct = max(largestProduct, digits[index..<index + span].reduce(1, combine: *))
+            largestProduct = max(largestProduct, digits[index..<index + span].reduce(1, *))
         }
 
         return largestProduct

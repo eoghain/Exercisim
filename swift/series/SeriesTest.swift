@@ -2,8 +2,8 @@ import XCTest
 @testable import Exercism
 
 private extension XCTest {
-    func XCTAssertEqualMultiArray(aArray1: Array<Array<Int>>, _ aArray2: Array<Array<Int>>) {
-        XCTAssertEqual(Array(aArray1.flatten()), Array(aArray2.flatten()))
+    func XCTAssertEqualMultiArray(_ aArray1: Array<Array<Int>>, _ aArray2: Array<Array<Int>>) {
+        XCTAssertEqual(Array(aArray1.joined()), Array(aArray2.joined()))
     }
 }
 

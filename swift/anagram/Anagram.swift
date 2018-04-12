@@ -13,22 +13,22 @@ struct Anagram {
     var word: String?
     
     init(word: String) {
-        self.word = word.lowercaseString
+        self.word = word.lowercased()
     }
     
-    func match(words: [String]) -> [String] {
+    func match(_ words: [String]) -> [String] {
         var anagrams: [String] = []
         
         guard let testWord = self.word else {
             return anagrams
         }
         
-        let sortedTestWord = testWord.characters.map { String($0) }.sort().joinWithSeparator("")
+        let sortedTestWord = testWord.characters.map { String($0) }.sorted().joined(separator: "")
         
         words.forEach { (word) -> () in
-            let lowercaseWord = word.lowercaseString
+            let lowercaseWord = word.lowercased()
             if (testWord != lowercaseWord) {
-                let sortedWord = lowercaseWord.characters.map { String($0) }.sort().joinWithSeparator("")
+                let sortedWord = lowercaseWord.characters.map { String($0) }.sorted().joined(separator: "")
                 if let hamming = Hamming.compute(sortedTestWord, against:sortedWord) {
                     if hamming == 0 {
                         anagrams.append(word)

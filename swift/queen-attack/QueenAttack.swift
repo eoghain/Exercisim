@@ -2,12 +2,12 @@ import Foundation
 
 class Queens {
     
-    enum InitError: ErrorType {
+    enum InitError: Error {
         case incorrectNumberOfCoordinates
         case invalidCoordinates
         case sameSpace
         
-        static func validateQueens(white: [Int], _ black: [Int]) throws {
+        static func validateQueens(_ white: [Int], _ black: [Int]) throws {
             guard white.count == 2 && black.count == 2 else {
             throw InitError.incorrectNumberOfCoordinates
             }
@@ -23,7 +23,7 @@ class Queens {
     let white: [Int]
     let black: [Int]
     
-    private static let validRange = 0...7
+    fileprivate static let validRange = 0...7
     
     var canAttack: Bool {
         switch true {
@@ -50,7 +50,7 @@ extension Queens: CustomStringConvertible {
                     case (black[0], black[1]): return "B"
                     default: return "_"
                 }
-            }.joinWithSeparator(" ")
-        }.joinWithSeparator("\n")
+            }.joined(separator: " ")
+        }.joined(separator: "\n")
     }
 }

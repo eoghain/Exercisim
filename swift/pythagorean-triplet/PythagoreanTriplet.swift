@@ -6,7 +6,7 @@ struct Triplet {
     let product: Int
     let isPythagorean: Bool
 
-    static func Where(min: Int = 1, maxFactor max: Int = 0, sum: Int? = nil) -> [Triplet] {
+    static func Where(_ min: Int = 1, maxFactor max: Int = 0, sum: Int? = nil) -> [Triplet] {
         return
             (min...max).flatMap { (a: Int) in
                 (a...max).flatMap { (b: Int) in

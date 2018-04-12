@@ -2,7 +2,7 @@ import Foundation
 
 struct Hamming {
     
-    static func compute(ref: String, against: String) -> Int? {
+    static func compute(_ ref: String, against: String) -> Int? {
         // hamming distance is only defined for strings with equal length
         guard (ref.characters.count == against.characters.count) else {
             return nil

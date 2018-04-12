@@ -2,23 +2,23 @@ import Foundation
 
 struct SimulatedRobot {
     enum Instructions: Character {
-        case TurnRight = "R"
-        case TurnLeft = "L"
-        case Advance = "A"
+        case turnRight = "R"
+        case turnLeft = "L"
+        case advance = "A"
     }
     
     enum Bearing {
         case north, east, south, west
     }
     
-    private var position: (x:Int, y:Int) = (0,0)
+    fileprivate var position: (x:Int, y:Int) = (0,0)
     
     var coordinates:[Int] {
         return [position.x, position.y]
     }
     var bearing:Bearing = .north
     
-    mutating func orient(bearing:Bearing) {
+    mutating func orient(_ bearing:Bearing) {
         self.bearing = bearing
     }
     
@@ -40,7 +40,7 @@ struct SimulatedRobot {
         }
     }
     
-    mutating func at(x x:Int, y:Int) {
+    mutating func at(x:Int, y:Int) {
         position.x = x
         position.y = y
     }
@@ -54,22 +54,22 @@ struct SimulatedRobot {
         }
     }
     
-    mutating func place(x x:Int, y:Int, direction:Bearing) {
+    mutating func place(x:Int, y:Int, direction:Bearing) {
         at(x:x, y:y)
         orient(direction)
     }
     
-    mutating func evaluate(instructions:String) {
+    mutating func evaluate(_ instructions:String) {
         self.instructions(instructions).forEach { instruction in
             switch instruction {
-                case .TurnRight: self.turnRight()
-                case .TurnLeft: self.turnLeft()
-                case .Advance: self.advance()
+                case .turnRight: self.turnRight()
+                case .turnLeft: self.turnLeft()
+                case .advance: self.advance()
             }
         }
     }
     
-    func instructions(instructions:String) -> [Instructions] {
+    func instructions(_ instructions:String) -> [Instructions] {
         return instructions.characters.flatMap { Instructions(rawValue: $0) }
     }
 }

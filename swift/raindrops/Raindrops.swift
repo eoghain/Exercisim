@@ -9,7 +9,7 @@ struct Raindrops {
         let uniquePrimes = Set(PrimeFactors(raindrops).toArray)
         
         let sounds = uniquePrimes
-            .sort()
+            .sorted()
             .reduce("") { (sounds, prime) in
                 if soundMap.keys.contains(prime) {
                     return sounds + soundMap[prime]!

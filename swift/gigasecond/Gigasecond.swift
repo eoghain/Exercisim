@@ -3,15 +3,15 @@ import Foundation
 class Gigasecond {
     
     let description: String
-    private let gigaSecond: Double = pow(10, 9)
+    fileprivate let gigaSecond: Double = pow(10, 9)
     
     init?(from: String) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.timeZone = NSTimeZone(name: "UTC")
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         
-        if let date = dateFormatter.dateFromString(from) {
-            self.description = dateFormatter.stringFromDate(date.dateByAddingTimeInterval(self.gigaSecond))
+        if let date = dateFormatter.date(from: from) {
+            self.description = dateFormatter.string(from: date.addingTimeInterval(self.gigaSecond))
         } else {
             return nil
         }

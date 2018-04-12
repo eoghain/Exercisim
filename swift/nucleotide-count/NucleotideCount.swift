@@ -10,10 +10,10 @@ class DNA {
             return nil;
         }
         
-        self.strand = strand.uppercaseString
+        self.strand = strand.uppercased()
     }
     
-    func count(nucleotide: Character) -> Int {
+    func count(_ nucleotide: Character) -> Int {
         return strand.characters.filter{ $0 == nucleotide }.count
     }
     

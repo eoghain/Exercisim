@@ -10,28 +10,29 @@ struct Crypto {
     var ciphertext: String {
         var cipher = ""
         
-        for index in 0..<size {
-            for segment in plaintextSegments {
-                let startIndex = segment.startIndex.advancedBy(index, limit:segment.endIndex)
-                let endIndex = segment.startIndex.advancedBy(index+1, limit:segment.endIndex)
-                let range = startIndex..<endIndex
-                cipher += segment.substringWithRange(range)
-            }
-        }
+//        for index in 0..<size {
+//            for segment in plaintextSegments {
+//                let startIndex = segment.characters.index(segment.startIndex, offsetBy: index, limitedBy:segment.endIndex)
+//                let endIndex = segment.characters.index(segment.startIndex, offsetBy: index+1, limitedBy:segment.endIndex)
+//                let range = Range(uncheckedBounds: (lower: startIndex, upper: endIndex))
+//                cipher += segment.substring(with: range)
+//            }
+//        }
         
         return cipher
     }
     
     var normalizeCiphertext: String {
-        let text = ciphertext
-        let charCount = text.characters.count
-        let rows = Int(ceil(Double(charCount) / Double(size)))
-        return text.segments(rows).joinWithSeparator(" ")
+        return ""
+//        let text = ciphertext
+//        let charCount = text.characters.count
+//        let rows = Int(ceil(Double(charCount) / Double(size)))
+//        return text.segments(rows).joined(separator: " ")
     }
     
     init(_ plain: String) {
-        self.plain = plain.lowercaseString
-        self.normalizePlaintext = plain.normalize().lowercaseString
+        self.plain = plain.lowercased()
+        self.normalizePlaintext = plain.normalize().lowercased()
         self.size = normalizePlaintext.squareSize()
         self.plaintextSegments = normalizePlaintext.segments(size)
     }
@@ -39,28 +40,28 @@ struct Crypto {
 
 extension String {
     func normalize() -> String {
-        let validCharacters = NSMutableCharacterSet()
-        validCharacters.formUnionWithCharacterSet(.letterCharacterSet())
-        validCharacters.formUnionWithCharacterSet(.decimalDigitCharacterSet())
+        let validCharacters = CharacterSet.letters.union(CharacterSet.decimalDigits)
         
         return String(self.characters.filter{ (c: Character) in
-            validCharacters.characterIsMember(String(c).utf16.first!) })
+            String(c).rangeOfCharacter(from: validCharacters) != nil
+        })
+//            validCharacters.contains(UnicodeScalar(String(c).utf16.first!)) })
     }
     
     func squareSize() -> Int {
         return Int(ceil(sqrt(Double(self.characters.count))))
     }
     
-    func segments(size: Int) -> [String] {
+    func segments(_ size: Int) -> [String] {
         var segments = [String]()
-        var index = self.startIndex
-        
-        while index < self.endIndex {
-            let endIndex = index.advancedBy(size, limit: self.endIndex)
-            let range = index..<endIndex
-            segments.append(self.substringWithRange(range))
-            index = endIndex
-        }
+//        var index = self.startIndex
+//        
+//        while index < self.endIndex {
+//            let endIndex = self.index(index, offsetBy: size, limitedBy: self.endIndex)
+//            let range = index..<endIndex
+//            segments.append(self.substring(with: range))
+//            index = endIndex
+//        }
         
         return segments
     }

@@ -13,19 +13,19 @@ class PhoneNumber: CustomStringConvertible {
     let number: String
     
     var prefix: String {
-        let index = self.number.startIndex.advancedBy(3)
-        let index2 = index.advancedBy(3)
-        return self.number.substringWithRange(index..<index2)
+        let index = self.number.characters.index(self.number.startIndex, offsetBy: 3)
+        let index2 = self.number.characters.index(index, offsetBy: 3)
+        return self.number.substring(with: index..<index2)
     }
     
     var lineNumber: String {
-        let index = self.number.endIndex.advancedBy(-4)
-        return self.number.substringFromIndex(index)
+        let index = self.number.characters.index(self.number.endIndex, offsetBy: -4)
+        return self.number.substring(from: index)
     }
     
     var areaCode: String {
-        let index = self.number.startIndex.advancedBy(3)
-        return self.number.substringToIndex(index)
+        let index = self.number.characters.index(self.number.startIndex, offsetBy: 3)
+        return self.number.substring(to: index)
     }
     
     var description: String {

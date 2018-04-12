@@ -5,32 +5,32 @@ private extension XCTestCase {
     
     // Workaround unit test liminitaiton on Optional Arrays/Sets
     #if swift(>=3.0)
-    private func sameCollection<C: Collection where C.Iterator.Element == String>(result: C?, _ expected: [String]?) -> Bool {
-        guard let result = result, expected = expected where similar(result, expected) else { return false }
+    private func sameCollection<C: Collection>(result: C?, _ expected: [String]?) -> Bool where C.Iterator.Element == String {
+        guard let result = result, let expected = expected , similar(result, expected) else { return false }
         for (index, student) in result.enumerated() {
             guard index < expected.count && expected.contains(student) else { return false }
         }
         return true
     }
     #else // Swift 2.2 and below
-    private func sameCollection<C: CollectionType where C.Generator.Element == String>(result: C?, _ expected: [String]?) -> Bool {
+    func sameCollection<C: Collection where C.Iterator.Element == String>(_ result: C?, _ expected: [String]?) -> Bool {
         guard let result = result, expected = expected where similar(result, expected) else { return false }
-        for (index, student) in result.enumerate() {
+        for (index, student) in result.enumerated() {
             guard index < expected.count && expected.contains(student) else { return false }
         }
         return true
         }
     #endif
     
-    private func similar<C: CollectionType>(result: C, _ expected: [String]) -> Bool {
+    func similar<C: Collection>(_ result: C, _ expected: [String]) -> Bool {
         return result.count.toIntMax() == IntMax(expected.count)
     }
     
-    func XCTAssertEqualCollection (collectionS : Set<String>? , _ collectionA : [String]? ) {
+    func XCTAssertEqualCollection (_ collectionS : Set<String>? , _ collectionA : [String]? ) {
         XCTAssert(sameCollection(collectionS, collectionA))
     }
     
-    func XCTAssertEqualCollection (collectionA1 : [String]?, _ collectionA2 : [String]? ) {
+    func XCTAssertEqualCollection (_ collectionA1 : [String]?, _ collectionA2 : [String]? ) {
         XCTAssert(sameCollection(collectionA1, collectionA2))
     }
 }
@@ -75,7 +75,7 @@ class GradeSchoolTest: XCTestCase {
         #if swift(>=3.0)
             XCTAssertEqual(Array(result.keys).sorted(isOrderedBefore: >), Array(expected.keys).sorted(isOrderedBefore: >))
         #else
-            XCTAssertEqual(Array(result.keys).sort(>), Array(expected.keys).sort(>))
+            XCTAssertEqual(Array(result.keys).sorted(by: >), Array(expected.keys).sorted(by: >))
         #endif
         XCTAssertEqualCollection(result[3], expected[3])
     }
@@ -114,7 +114,7 @@ class GradeSchoolTest: XCTestCase {
         #if swift(>=3.0)
             XCTAssertEqual(Array(result.keys).sorted(isOrderedBefore: >), Array(expected.keys).sorted(isOrderedBefore: >))
         #else
-            XCTAssertEqual(Array(result.keys).sort(>), Array(expected.keys).sort(>))
+            XCTAssertEqual(Array(result.keys).sorted(by: >), Array(expected.keys).sorted(by: >))
         #endif
         XCTAssertEqualCollection(result[3], expected[3])
         XCTAssertEqualCollection(result[4], expected[4])

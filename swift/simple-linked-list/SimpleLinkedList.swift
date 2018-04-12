@@ -10,8 +10,8 @@ class Element<T: Equatable> {
         self.next = next
     }
     
-    static func fromArray(array: [T]) -> Element<T> {
-        return array.reverse().reduce(Element<T>()) { Element($1, $0) }
+    static func fromArray(_ array: [T]) -> Element<T> {
+        return array.reversed().reduce(Element<T>()) { Element($1, $0) }
     }
     
     func toArray() -> [T] {
@@ -19,6 +19,6 @@ class Element<T: Equatable> {
     }
     
     func reverseElements() -> Element<T> {
-        return Element.fromArray(self.toArray().reverse())
+        return Element.fromArray(self.toArray().reversed())
     }
 }

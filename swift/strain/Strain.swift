@@ -2,7 +2,7 @@ import Foundation
 
 extension Array {
     
-    func keep(predicate: (Element) -> Bool) -> [Element] {
+    func keep(_ predicate: (Element) -> Bool) -> [Element] {
         var keepArray = [Element]()
         for item in self {
             if (predicate(item)) {
@@ -12,7 +12,7 @@ extension Array {
         return keepArray
     }
     
-    func discard(predicate: (Element) -> Bool) -> [Element] {
+    func discard(_ predicate: (Element) -> Bool) -> [Element] {
         return keep { !predicate($0) }
     }
 }

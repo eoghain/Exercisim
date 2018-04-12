@@ -16,12 +16,12 @@ struct TwelveDaysSong {
         ("twelfth", "twelve Drummers Drumming")
     ]
     
-    static func verse(verse: Int) -> String {
+    static func verse(_ verse: Int) -> String {
         return "On the \(TwelveDaysSong.verseMap[verse - 1].0) day of Christmas my true love gave to me, \(TwelveDaysSong.versesTo(verse)).\n"
     }
     
-    static func versesTo(verse: Int) -> String {
-        return (0..<verse).reverse().reduce(""){
+    static func versesTo(_ verse: Int) -> String {
+        return (0..<verse).reversed().reduce(""){
             (allVerses: String, verseNumber: Int) in
             let and = (verse > 1 && verseNumber == 0) ? "and " : ""
             let sep = (verseNumber == 0) ? "" : ", "
@@ -29,7 +29,7 @@ struct TwelveDaysSong {
         }
     }
     
-    static func verses(start: Int, _ end: Int) -> String {
+    static func verses(_ start: Int, _ end: Int) -> String {
         return (start...end).reduce(""){ "\($0)\(TwelveDaysSong.verse($1))\n" }
     }
     

@@ -2,14 +2,14 @@ import Foundation
 
 enum Allergy: UInt {
     case
-        Eggs = 1,
-        Peanuts = 2,
-        Shellfish = 4,
-        Strawberries = 8,
-        Tomatoes = 16,
-        Chocolate = 32,
-        Pollen = 64,
-        Cats = 128
+        eggs = 1,
+        peanuts = 2,
+        shellfish = 4,
+        strawberries = 8,
+        tomatoes = 16,
+        chocolate = 32,
+        pollen = 64,
+        cats = 128
 }
 
 struct Allergies {
@@ -20,7 +20,7 @@ struct Allergies {
         self.alergyNumber = number
     }
     
-    func hasAllergy(allergy: Allergy) -> Bool {
+    func hasAllergy(_ allergy: Allergy) -> Bool {
         return self.alergyNumber & allergy.rawValue > 0
     }
 }

@@ -8,8 +8,8 @@ struct Meetup {
     let which: String
     
     var description: String {
-        let dateComponents = NSDateComponents()
-        dateComponents.calendar = NSCalendar.currentCalendar()
+        var dateComponents = DateComponents()
+        (dateComponents as NSDateComponents).calendar = Calendar.current
         dateComponents.year = self.year
         dateComponents.month = self.month
         dateComponents.weekday = self.weekday
@@ -33,7 +33,7 @@ struct Meetup {
             }
         }
         
-        return NSDateFormatter("YYYY-MM-dd").stringFromDate(dateComponents.date!)
+        return DateFormatter("YYYY-MM-dd").string(from: (dateComponents as NSDateComponents).date!)
     }
     
     init (year: Int, month: Int) {
@@ -50,13 +50,13 @@ struct Meetup {
         self.which = which
     }
     
-    func day(day: Int, which: String) -> Meetup {
+    func day(_ day: Int, which: String) -> Meetup {
         return Meetup(year: self.year, month: self.month, day: day, which: which)
     }
     
 }
 
-extension NSDateFormatter {
+extension DateFormatter {
     
     convenience init(_ format: String) {
         self.init()

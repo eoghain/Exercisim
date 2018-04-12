@@ -398,6 +398,16 @@
 			path = pangram;
 			sourceTree = "<group>";
 		};
+		31F896C01DECEF2F0004E7D9 /* binary-search-tree */ = {
+			isa = PBXGroup;
+			children = (
+				31F896C61DECEF4D0004E7D9 /* BinarySearchTree.swift */,
+				31F896C11DECEF2F0004E7D9 /* BinarySearchTreeTest.swift */,
+				31F896C21DECEF2F0004E7D9 /* README.md */,
+			);
+			path = "binary-search-tree";
+			sourceTree = "<group>";
+		};
 		31FBEC711DC2BB03003C5F0D /* secret-handshake */ = {
 			isa = PBXGroup;
 			children = (
@@ -1228,7 +1238,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1241,7 +1251,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1254,7 +1264,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.resmed.ExercismTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Exercism.app/Exercism";
 			};
 			name = Debug;
@@ -1268,7 +1278,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.resmed.ExercismTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Exercism.app/Exercism";
 			};
 			name = Release;

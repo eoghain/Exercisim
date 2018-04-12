@@ -1,6 +1,6 @@
 import Foundation
 
-struct SecretHandshake: OptionSetType {
+struct SecretHandshake: OptionSet {
     
     let rawValue: Int
 
@@ -11,7 +11,7 @@ struct SecretHandshake: OptionSetType {
     static let Jump        = SecretHandshake(rawValue: 1 << 3)
     static let Reverse     = SecretHandshake(rawValue: 1 << 4)
     
-    private var description: String {
+    fileprivate var description: String {
         switch self {
             case SecretHandshake.None: return ""
             case SecretHandshake.Wink: return "wink"
@@ -33,7 +33,7 @@ struct SecretHandshake: OptionSetType {
         }
         
         if self.contains(SecretHandshake.Reverse) {
-            commands = commands.reverse()
+            commands = commands.reversed()
         }
         
         return commands

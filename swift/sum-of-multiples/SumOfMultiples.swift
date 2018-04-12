@@ -2,7 +2,7 @@ import Foundation
 
 struct SumOfMultiples {
     
-    static func toLimit(limit: UInt, inMultiples: [UInt]) -> UInt {
+    static func toLimit(_ limit: UInt, inMultiples: [UInt]) -> UInt {
         // Remove 0's
         let validMultipliers = inMultiples.filter { $0 > 0 }
         
@@ -14,6 +14,6 @@ struct SumOfMultiples {
         }
         
         // Sum all multiples
-        return multiples.reduce(0, combine:+)
+        return multiples.reduce(0, +)
     }
 }

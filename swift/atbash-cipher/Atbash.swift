@@ -2,11 +2,11 @@ import Foundation
 
 struct Atbash {
     
-    static func encode(message: String) -> String {
+    static func encode(_ message: String) -> String {
         var index = 0
         var encodedMessage = ""
         
-        for ch in message.lowercaseString.characters {
+        for ch in message.lowercased().characters {
             if let encodedChar = bashCharacter(ch)
             {
                 encodedMessage += encodedChar
@@ -17,16 +17,16 @@ struct Atbash {
             }
         }
         
-        return encodedMessage.stringByTrimmingCharactersInSet(.whitespaceCharacterSet())
+        return encodedMessage.trimmingCharacters(in: CharacterSet.whitespaces)
     }
     
-    static func bashCharacter(character: Character) -> String? {
+    static func bashCharacter(_ character: Character) -> String? {
         let key = Array("abcdefghijklmnopqrstuvwxyz".characters)
-        if let charIndex = key.indexOf(character) {
+        if let charIndex = key.index(of: character) {
             return String(key[25 - charIndex])
         }
         
-        if (String(character).stringByTrimmingCharactersInSet(.decimalDigitCharacterSet()).isEmpty) {
+        if (String(character).trimmingCharacters(in: CharacterSet.decimalDigits).isEmpty) {
             return String(character)
         }
         

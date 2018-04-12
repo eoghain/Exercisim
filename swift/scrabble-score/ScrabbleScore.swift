@@ -23,16 +23,16 @@ struct Scrabble {
         self.word = word;
     }
     
-    static func score(word: String?) -> Int {
+    static func score(_ word: String?) -> Int {
         guard let unwrappedWord = word else {
             return 0
         }
         
-        let tiles = unwrappedWord.uppercaseString.characters
+        let tiles = unwrappedWord.uppercased().characters
         return tiles.reduce(0) { score, tile in score + tileScore(tile) }
     }
     
-    static func tileScore(tile: Character) -> Int {
+    static func tileScore(_ tile: Character) -> Int {
         for (score, tiles) in Scrabble.tileScores
         {
             if (tiles.contains(String(tile)))
