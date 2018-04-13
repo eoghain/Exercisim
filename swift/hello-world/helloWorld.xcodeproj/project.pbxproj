@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9DCE80801BA747050024C69D /* helloWorldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE807F1BA747050024C69D /* helloWorldTest.swift */; };
-		9DCE80881BA748820024C69D /* helloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE80871BA748820024C69D /* helloWorld.swift */; settings = {ASSET_TAGS = (); }; };
+		9DCE80881BA748820024C69D /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE80871BA748820024C69D /* HelloWorld.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9DCE807D1BA747050024C69D /* helloWorldTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = helloWorldTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCE807F1BA747050024C69D /* helloWorldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloWorldTest.swift; sourceTree = "<group>"; };
 		9DCE80811BA747050024C69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DCE80871BA748820024C69D /* helloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helloWorld.swift; sourceTree = SOURCE_ROOT; };
+		9DCE80871BA748820024C69D /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelloWorld.swift; path = Sources/HelloWorld.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 		9DCE807E1BA747050024C69D /* helloWorldTest */ = {
 			isa = PBXGroup;
 			children = (
-				9DCE80871BA748820024C69D /* helloWorld.swift */,
+				9DCE80871BA748820024C69D /* HelloWorld.swift */,
 				9DCE807F1BA747050024C69D /* helloWorldTest.swift */,
 				9DCE80811BA747050024C69D /* Info.plist */,
 			);
@@ -86,6 +86,7 @@
 				TargetAttributes = {
 					9DCE807C1BA747050024C69D = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -122,7 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DCE80801BA747050024C69D /* helloWorldTest.swift in Sources */,
-				9DCE80881BA748820024C69D /* helloWorld.swift in Sources */,
+				9DCE80881BA748820024C69D /* HelloWorld.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +216,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.exercism.io.helloWorldTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -226,6 +229,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.exercism.io.helloWorldTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
