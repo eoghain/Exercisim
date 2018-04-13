@@ -2,11 +2,11 @@ import XCTest
 @testable import KindergartenGarden
 
 class KindergartenGardenTests: XCTestCase {
-    private let fullGarden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
-    private let disorderedGarden = Garden("VCRRGVRG\nRVGCCGCV", children: ["Samantha", "Patricia", "Xander", "Roger"])
-    private static let diagram = "VCRRGVRG\nRVGCCGCV"
-    private let garden1 = Garden(diagram, children: ["Alice", "Bob", "Charlie", "Dan"])
-    private let garden2 = Garden(diagram, children: ["Bob", "Charlie", "Dan", "Erin"])
+    fileprivate let fullGarden = Garden("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
+    fileprivate let disorderedGarden = Garden("VCRRGVRG\nRVGCCGCV", children: ["Samantha", "Patricia", "Xander", "Roger"])
+    fileprivate static let diagram = "VCRRGVRG\nRVGCCGCV"
+    fileprivate let garden1 = Garden(diagram, children: ["Alice", "Bob", "Charlie", "Dan"])
+    fileprivate let garden2 = Garden(diagram, children: ["Bob", "Charlie", "Dan", "Erin"])
 
     func testAlicesGarden() {
         let garden = Garden("RC\nGG")
