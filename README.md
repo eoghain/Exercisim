@@ -4,13 +4,13 @@ All of my [Exercism.io](http://exercisim.io) projects done while I'm learning sw
 
 ## Enums
 
-* [SpaceAge](swift/spave-age/Source/SpaceAge.swift) - Enum with custom values
+* [SpaceAge](swift/space-age/Sources/SpaceAge.swift) - Enum with custom values
 
 ## Errors
 
-* [Grains](swift/grains/Source/Grains.swift) - Thowing an ErrorType enum with with a message.  Check [GrainsTest](swift/grains/Source/Grains.swift) for an example of how to catch errors with embedded messages.
+* [Grains](swift/grains/Sources/Grains.swift) - Thowing an ErrorType enum with with a message.  Check [GrainsTest](swift/grains/Source/Grains.swift) for an example of how to catch errors with embedded messages.
 
-* [QueenAttack](swift/queen-attack/Source/QueenAttack.swift) - Embedding validation logic inside of the ErrorType enum for clean methods that look like:
+* [QueenAttack](swift/queen-attack/Sources/QueenAttack.swift) - Embedding validation logic inside of the ErrorType enum for clean methods that look like:
 ```swift
 init(white: [Int] = [0, 3], black: [Int] = [7, 3]) throws {
         try InitError.validateQueens(white, black)
@@ -38,26 +38,26 @@ init(white: [Int] = [0, 3], black: [Int] = [7, 3]) throws {
 
 ## Extensions
 
-* [CryptoSquare](swift/crypto-square/Source/CryptoSquare.swift) - Extending swift String to do custom processing
-* [Clock](swift/clock/Source/Clock.swift) - Extending own class for protocol encapsulation
-* [RomanNumerals](swift/roman-numerals/Source/RomanNumerals.swift) - Extending own class for protocol encapsulation
-* [RobotName](swift/robot-name/Source/RobotName.swift) - Extending Array & Int
-* [Accumulate](swift/accumulate/Source/Accumulate.swift) - Extending Array with Generic function
-* [Meetup](swift/accumulate/Source/Meetup.swift) - Extending NSDateFormatter to add a convenience method to build from string
-* [Binary](swift/binary/Source/Binary.swift) - Extending Int
-* [Bob](swift/bob/Source/Bob.swift) - Extending String
+* [CryptoSquare](swift/crypto-square/Sources/CryptoSquare.swift) - Extending swift String to do custom processing
+* [Clock](swift/clock/Sources/Clock.swift) - Extending own class for protocol encapsulation
+* [RomanNumerals](swift/roman-numerals/Sources/RomanNumerals.swift) - Extending own class for protocol encapsulation
+* [RobotName](swift/robot-name/Sources/RobotName.swift) - Extending Array & Int
+* [Accumulate](swift/accumulate/Sources/Accumulate.swift) - Extending Array with Generic function
+* [Meetup](swift/accumulate/Sources/Meetup.swift) - Extending NSDateFormatter to add a convenience method to build from string
+* [Binary](swift/binary/Sources/Binary.swift) - Extending Int
+* [Bob](swift/bob/Sources/Bob.swift) - Extending String
 
 ## Operator Overloading
 
-* [Clock](swift/clock/Source/Clock.swift) - Implement == operator to allow custom class/struct to implement the Equatable protocol
+* [Clock](swift/clock/Sources/Clock.swift) - Implement == operator to allow custom class/struct to implement the Equatable protocol
 
 ## Guarding
 
-* [NucleotideCount](swift/nucleotide-count/Source/NucleotideCount.swift)
-* [Binary](swift/binary/Source/Binary.swift) - Extending Int
+* [NucleotideCount](swift/nucleotide-count/Sources/NucleotideCount.swift)
+* [Binary](swift/binary/Sources/Binary.swift) - Extending Int
 
 
 ## Generics
 
-* [Accumulate](swift/accumulate/Source/Accumulate.swift) - Extending Array with Generic function
-* [SimpleLinkedList](swift/simple-linked-list/Source/SimpleLinkedList.swift) - Generic class from scratch
+* [Accumulate](swift/accumulate/Sources/Accumulate.swift) - Extending Array with Generic function
+* [SimpleLinkedList](swift/simple-linked-list/Sources/SimpleLinkedList.swift) - Generic class from scratch
